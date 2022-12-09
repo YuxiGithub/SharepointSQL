@@ -14,12 +14,9 @@ namespace ReactCRUDAPI.Models
     
     public partial class Project
     {
-        public int Id { get; set; }
-        public int IdClient { get; set; }
+        public int ProjectId { get; set; }
+        public int ClientId { get; set; }
         public string Name { get; set; }
-        public System.DateTime StartDate { get; set; }
-        public System.DateTime EndDate { get; set; }
-        public string SowID { get; set; }
-        public decimal AmountSigned { get; set; }
+        public string Description { get; set; }
     }
 }

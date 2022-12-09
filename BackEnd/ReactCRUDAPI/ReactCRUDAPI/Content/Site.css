@@ -15,3 +15,123 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* All Pages*/
+
+.pageTitle {
+    color: #54284E;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.pageSubtitle {
+    color: #54284E;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    white-space: nowrap;
+}
+/* Index Page*/
+.table-header {
+    background-color: #C0D6DF;
+}
+
+    .table-header th {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #00416A; 
+    }
+
+.table tr:hover {
+    background-color: #C0D6DF;
+}
+
+.table td {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    color: #00416A;
+}
+
+.customLink {
+    text-decoration: none;
+}
+
+    .customLink i {
+        width: 24px;
+        height: 24px;
+        color: #00416A;
+        font-size: 24px;
+    }
+
+@font-face {
+    font-family: Poppins;
+    src: url('fonts/Poppins-Regular.ttf');
+}
+
+/*Edit Page*/
+
+.form-container {
+    width: 384px;
+    margin: auto;
+    height: 700px;
+    left: 4px;
+    top: 362px;
+    background: #F2F6F8;
+    border-radius: 20px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 55px;
+}
+
+.form-control.text-box.single-line {
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid #668DA6;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding-left: 0px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #8C8C8C;
+}
+
+.control-label {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    white-space: nowrap;
+}
+
+.customButton {
+    text-decoration: none;
+    background: rgba(223, 235, 239, 0.4);
+    border: 1px solid #00416A;
+    border-radius: 8px;
+    width: 126px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.customActionButton {
+    background: #336788 !important;
+    color: white !important;
+}
+
+.custom-form-group {
+    margin-top: 32px;
+}

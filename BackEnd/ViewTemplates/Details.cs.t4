@@ -1,0 +1,102 @@
+﻿<#@ template language="C#" HostSpecific="True" #>
+<#@ output extension=".cshtml" #>
+<#@ include file="Imports.include.t4" #>
+@model <#= ViewDataTypeName #>
+<#
+// The following chained if-statement outputs the file header code and markup for a partial view, a view using a layout page, or a regular view.
+if(IsPartialView) {
+#>
+
+<#
+} else if(IsLayoutPageSelected) {
+#>
+
+@{
+<#
+if (!String.IsNullOrEmpty(LayoutPageFile)) {
+#>
+    Layout = "<#= LayoutPageFile#>";
+<#
+}
+#>
+}
+
+<#
+} else {
+#>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+<#
+    PushIndent("    ");
+}
+#>
+<div>
+    <dl class="dl-horizontal">
+    <div class="form-container">
+    <h4 class="pageTitle"><#= ViewDataTypeShortName #> Details</h4>
+<#
+foreach (PropertyMetadata property in ModelMetadata.Properties) {
+    if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey) {
+#>
+<#
+        // We do not want to show any association properties for which there is
+        // no associated foreign key.
+        if (property.IsAssociation && GetRelatedModelMetadata(property) == null) {
+            continue;
+        }
+#>
+        <dt>
+            @Html.DisplayNameFor(model => model.<#= GetValueExpression(property) #>)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.<#= GetValueExpression(property) #>)
+        </dd>
+<#
+    }
+}
+#>
+    <p class="custom-form-group">
+    <#
+    string controllerstring = ViewDataTypeName.Split('.').Last().ToString();
+    controllerstring = controllerstring + "s";
+    string pkName = GetPrimaryKeyName();
+    if (pkName != null) {
+    #>
+        <input type="button" value="Cancel" class="customButton" onclick="location.href='@Url.Action("Index", "<#= controllerstring #>")'" />
+        <input type="button" value="Edit" class="customButton customActionButton" onclick="location.href='@Url.Action("Edit", "<#= controllerstring #>", new { id = Model.<#= pkName #> })'" />
+    <#
+    } else {
+    #>
+        <input type="button" value="Cancel" class="customButton" onclick="location.href='@Url.Action("Index", "<#= controllerstring #>")'" />
+        <input type="button" value="Edit" class="customButton customActionButton" onclick="location.href='@Url.Action("Edit", "<#= controllerstring #>", new { id = Model.PrimaryKey })'" />
+    <#
+    }
+    #>
+    </p>
+    </dl>
+</div>
+</div>
+<#
+// The following code closes the tag used in the case of a view using a layout page and the body and html tags in the case of a regular view page
+#>
+<#
+if(!IsPartialView && !IsLayoutPageSelected) {
+    ClearIndent();
+#>
+</body>
+</html>
+<#
+}
+#>
+<#@ include file="ModelMetadataFunctions.cs.include.t4" #>

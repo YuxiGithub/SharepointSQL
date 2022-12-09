@@ -1,0 +1,65 @@
+﻿@model ReactCRUDAPI.Models.Client
+
+@{
+}
+
+<div>
+    <dl class="dl-horizontal">
+    <div class="form-container">
+    <h4 class="pageTitle">Client Details</h4>
+        <dt>
+            Client 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+        <dt>
+            Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            Tactical Contact
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tactical_Contact)
+        </dd>
+        <dt>
+           Operative Contact
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operative_Contact)
+        </dd>
+        <dt>
+           Strategic Contact
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Strategic_Contact)
+        </dd>
+        <dt>
+            Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            Country
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+    <p class="custom-form-group">
+        <input type="button" value="Cancel" class="customButton" onclick="location.href='@Url.Action("Index", "Clients")'" />
+            <input type="button" value="Edit" class="customButton customActionButton" onclick="location.href='@Url.Action("Edit", "Clients", new { id = Model.UniqueId })'" />
+        </p>
+    </dl>
+</div>
+</div>

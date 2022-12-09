@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ReactCRUDAPI.Models.Client>
+
+@{
+}
+
+<p>
+ <a href="@Url.Action("Create", "Clients")" class="customLink"><i class="ti ti-circle-plus"></i></a>
+</p>
+<table class="table">
+    <tr class="table-header">
+        <th>
+            Client Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Tactical Contact
+        </th>
+        <th>
+            Operative Contact
+        </th>
+        <th>
+            Strategic Contact
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Country
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr data-href="@Url.Action("Details", "Clients", new { id=item.UniqueId })">
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tactical_Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operative_Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Strategic_Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", "Clients",  new { id=item.UniqueId })" class="customLink"><i class="ti ti-trash-x"></i></a>
+            <a href="@Url.Action("Edit", "Clients",  new { id=item.UniqueId})" class="customLink"><i class="ti ti-edit-circle"></i></a>
+            <a href="@Url.Action("Details", "Clients",  new { id=item.UniqueId})" class="customLink"><i class="ti ti-list-details"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,78 @@
+﻿@model ReactCRUDAPI.Models.Client
+
+@{
+}
+
+<div>
+    <dl class="dl-horizontal">
+    <div class="form-container">
+
+    <h4 class="pageTitle">Delete Client</h4>
+    <h3 class="pageSubtitle">Are you sure you want to delete this?</h3>
+        <dt>
+            Client Id
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+
+        <dt>
+            Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Tactical Contact
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tactical_Contact)
+        </dd>
+
+        <dt>
+            Operative Contact
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operative_Contact)
+        </dd>
+
+        <dt>
+            Strategic Contact
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Strategic_Contact)
+        </dd>
+
+        <dt>
+            Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            Country
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+@using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color custom-form-group">
+            <input type="button" value="Cancel" class="customButton" onclick="location.href='@Url.Action("Index", "Clients")'" />
+            <button type="submit" class="customButton customActionButton">Delete</button>
+        </div>
+    }
+    </dl>
+    </div>
+</div>

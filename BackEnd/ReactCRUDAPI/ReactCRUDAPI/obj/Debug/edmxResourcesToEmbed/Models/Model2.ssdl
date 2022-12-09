@@ -1,5 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CRUD.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="UniqueId" />
+    </Key>
+    <Property Name="UniqueId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="249" />
+    <Property Name="Tactical Contact" Type="nvarchar" MaxLength="250" />
+    <Property Name="Operative Contact" Type="nvarchar" MaxLength="250" />
+    <Property Name="Strategic Contact" Type="nvarchar" MaxLength="250" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Country" Type="nvarchar" MaxLength="20" />
+  </EntityType>
   <EntityType Name="Clients">
     <Key>
       <PropertyRef Name="Id" />
@@ -9,6 +22,50 @@
     <Property Name="MainPOC" Type="varchar" MaxLength="150" Nullable="false" />
     <Property Name="TacticalPOC" Type="varchar" MaxLength="150" Nullable="false" />
     <Property Name="OperativePOC" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="UniqueId" />
+    </Key>
+    <Property Name="UniqueId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="200" />
+    <Property Name="PersonalID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="CurrentCost" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Holidays">
+    <Key>
+      <PropertyRef Name="UniqueId" />
+    </Key>
+    <Property Name="UniqueId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Positions">
+    <Key>
+      <PropertyRef Name="PositionId" />
+    </Key>
+    <Property Name="PositionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SowId" Type="int" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="ClientRole" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rate" Type="float" />
+    <Property Name="IdEmployee" Type="int" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Dedication" Type="int" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="300" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'test-leoncio.dbo.Projects' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -30,8 +87,34 @@ warning 6002: The table/view 'test-leoncio.dbo.Projects' does not have a primary
     <Property Name="SowID" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="AmountSigned" Type="money" Nullable="false" />
   </EntityType>
+  <EntityType Name="Sows">
+    <Key>
+      <PropertyRef Name="SowId" />
+    </Key>
+    <Property Name="SowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectId" Type="int" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Budget" Type="float" />
+  </EntityType>
+  <EntityType Name="WorkingDays">
+    <Key>
+      <PropertyRef Name="UniqueId" />
+    </Key>
+    <Property Name="UniqueId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Month" Type="int" />
+    <Property Name="WDays" Type="int" />
+    <Property Name="Country" Type="nvarchar" MaxLength="200" />
+  </EntityType>
   <EntityContainer Name="CRUDStoreContainer">
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Holidays" EntityType="Self.Holidays" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Positions" EntityType="Self.Positions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sows" EntityType="Self.Sows" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkingDays" EntityType="Self.WorkingDays" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Projects" EntityType="Self.Projects" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [Projects].[Id] AS [Id], 

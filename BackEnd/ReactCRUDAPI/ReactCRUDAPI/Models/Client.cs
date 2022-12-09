@@ -14,10 +14,13 @@ namespace ReactCRUDAPI.Models
     
     public partial class Client
     {
-        public int Id { get; set; }
+        public int UniqueId { get; set; }
+        public Nullable<int> ClientId { get; set; }
         public string Name { get; set; }
-        public string MainPOC { get; set; }
-        public string TacticalPOC { get; set; }
-        public string OperativePOC { get; set; }
+        public string Tactical_Contact { get; set; }
+        public string Operative_Contact { get; set; }
+        public string Strategic_Contact { get; set; }
+        public string Address { get; set; }
+        public string Country { get; set; }
     }
 }
