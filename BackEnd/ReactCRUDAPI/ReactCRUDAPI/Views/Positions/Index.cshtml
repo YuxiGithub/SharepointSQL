@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ReactCRUDAPI.Models.Position>
+
+@{
+}
+
+<p>
+ <a href="@Url.Action("Create", "Positions")" class="customLink"><i class="ti ti-circle-plus"></i></a>
+</p>
+<table class="table">
+    <tr class="table-header">
+        <th>
+            @Html.DisplayNameFor(model => model.SowId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientRole)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdEmployee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dedication)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr data-href="@Url.Action("Details", "Positions", new { id=item.PositionId })">
+        <td>
+            @Html.DisplayFor(modelItem => item.SowId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientRole)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEmployee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dedication)
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", "Positions",  new { id=item.PositionId })" class="customLink"><i class="ti ti-trash-x"></i></a>
+            <a href="@Url.Action("Edit", "Positions",  new { id=item.PositionId})" class="customLink"><i class="ti ti-edit-circle"></i></a>
+            <a href="@Url.Action("Details", "Positions",  new { id=item.PositionId})" class="customLink"><i class="ti ti-list-details"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ReactCRUDAPI.Models.Sow>
+
+@{
+}
+
+<p>
+ <a href="@Url.Action("Create", "Sows")" class="customLink"><i class="ti ti-circle-plus"></i></a>
+</p>
+<table class="table">
+    <tr class="table-header">
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Budget)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr data-href="@Url.Action("Details", "Sows", new { id=item.SowId })">
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Budget)
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", "Sows",  new { id=item.SowId })" class="customLink"><i class="ti ti-trash-x"></i></a>
+            <a href="@Url.Action("Edit", "Sows",  new { id=item.SowId})" class="customLink"><i class="ti ti-edit-circle"></i></a>
+            <a href="@Url.Action("Details", "Sows",  new { id=item.SowId})" class="customLink"><i class="ti ti-list-details"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

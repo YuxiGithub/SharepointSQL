@@ -161,6 +161,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PositionsController.cs" />
+    <Compile Include="Controllers\SowsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,9 +177,6 @@
     </Compile>
     <Compile Include="Models\IControllerHooks.cs" />
     <Compile Include="Models\Position.cs">
-      <DependentUpon>YUXI_OSS_DEV.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Project.cs">
       <DependentUpon>YUXI_OSS_DEV.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Project1.cs">
@@ -226,6 +225,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\fonts\OFL.txt" />
+    <Content Include="Content\icons\calendar.svg" />
     <Content Include="Content\icons\tabler-icons.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -311,9 +311,19 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Clients\Index.cshtml" />
     <Content Include="Views\Clients\Edit.cshtml" />
-    <Content Include="Views\Clients\Create.cshtml" />
     <Content Include="Views\Clients\Details.cshtml" />
     <Content Include="Views\Clients\Delete.cshtml" />
+    <Content Include="Views\Positions\Create.cshtml" />
+    <Content Include="Views\Positions\Delete.cshtml" />
+    <Content Include="Views\Positions\Details.cshtml" />
+    <Content Include="Views\Positions\Edit.cshtml" />
+    <Content Include="Views\Positions\Index.cshtml" />
+    <Content Include="Views\Clients\Create.cshtml" />
+    <Content Include="Views\Sows\Delete.cshtml" />
+    <Content Include="Views\Sows\Details.cshtml" />
+    <Content Include="Views\Sows\Index.cshtml" />
+    <Content Include="Views\Sows\Edit.cshtml" />
+    <Content Include="Views\Sows\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

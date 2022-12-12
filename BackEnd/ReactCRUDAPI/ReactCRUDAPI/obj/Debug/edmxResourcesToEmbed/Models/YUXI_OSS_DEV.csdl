@@ -48,15 +48,6 @@
     <Property Name="EndDate" Type="DateTime" Precision="3" />
     <Property Name="Dedication" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
-  <EntityType Name="Project">
-    <Key>
-      <PropertyRef Name="ProjectId" />
-    </Key>
-    <Property Name="ProjectId" Type="Int32" Nullable="false" />
-    <Property Name="ClientId" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-  </EntityType>
   <EntityType Name="Project1">
     <Key>
       <PropertyRef Name="Id" />
@@ -93,7 +84,6 @@
     <EntitySet Name="Employees" EntityType="Self.Employee" />
     <EntitySet Name="Holidays" EntityType="Self.Holiday" />
     <EntitySet Name="Positions" EntityType="Self.Position" />
-    <EntitySet Name="Projects" EntityType="Self.Project" />
     <EntitySet Name="Projects1" EntityType="Self.Project1" />
     <EntitySet Name="Sows" EntityType="Self.Sow" />
     <EntitySet Name="WorkingDays" EntityType="Self.WorkingDay" />

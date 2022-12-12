@@ -53,15 +53,6 @@
           <Property Name="EndDate" Type="datetime" />
           <Property Name="Dedication" Type="nvarchar" MaxLength="200" Nullable="false" />
         </EntityType>
-        <EntityType Name="Project">
-          <Key>
-            <PropertyRef Name="ProjectId" />
-          </Key>
-          <Property Name="ProjectId" Type="int" Nullable="false" />
-          <Property Name="ClientId" Type="int" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
-        </EntityType>
         <EntityType Name="Projects">
           <Key>
             <PropertyRef Name="Id" />
@@ -98,7 +89,6 @@
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Holiday" EntityType="Self.Holiday" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sow" EntityType="Self.Sow" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WorkingDay" EntityType="Self.WorkingDay" Schema="dbo" store:Type="Tables" />
@@ -156,15 +146,6 @@
           <Property Name="EndDate" Type="DateTime" Precision="3" />
           <Property Name="Dedication" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="Project">
-          <Key>
-            <PropertyRef Name="ProjectId" />
-          </Key>
-          <Property Name="ProjectId" Type="Int32" Nullable="false" />
-          <Property Name="ClientId" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
         <EntityType Name="Project1">
           <Key>
             <PropertyRef Name="Id" />
@@ -201,7 +182,6 @@
           <EntitySet Name="Employees" EntityType="Self.Employee" />
           <EntitySet Name="Holidays" EntityType="Self.Holiday" />
           <EntitySet Name="Positions" EntityType="Self.Position" />
-          <EntitySet Name="Projects" EntityType="Self.Project" />
           <EntitySet Name="Projects1" EntityType="Self.Project1" />
           <EntitySet Name="Sows" EntityType="Self.Sow" />
           <EntitySet Name="WorkingDays" EntityType="Self.WorkingDay" />
@@ -261,16 +241,6 @@
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />
                 <ScalarProperty Name="EndDate" ColumnName="EndDate" />
                 <ScalarProperty Name="Dedication" ColumnName="Dedication" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Projects">
-            <EntityTypeMapping TypeName="YUXI_OSS_DEV_Model.Project">
-              <MappingFragment StoreEntitySet="Project">
-                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
-                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,0 +1,86 @@
+﻿@model ReactCRUDAPI.Models.Position
+
+@{
+}
+
+<div>
+    <dl class="dl-horizontal">
+    <div class="form-container">
+
+    <h4 class="pageTitle">Delete Position</h4>
+    <h3 class="pageSubtitle">Are you sure you want to delete this?</h3>
+        <dt>
+            @Html.DisplayNameFor(model => model.SowId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SowId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientRole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientRole)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEmployee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEmployee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dedication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dedication)
+        </dd>
+
+@using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color custom-form-group">
+            <input type="button" value="Cancel" class="customButton" onclick="location.href='@Url.Action("Index", "Positions")'" />
+            <button type="submit" class="customButton customActionButton">Delete</button>
+        </div>
+    }
+    </dl>
+    </div>
+</div>

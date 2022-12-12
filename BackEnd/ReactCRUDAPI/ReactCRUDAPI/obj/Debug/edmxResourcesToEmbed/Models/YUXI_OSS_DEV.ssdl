@@ -48,15 +48,6 @@
     <Property Name="EndDate" Type="datetime" />
     <Property Name="Dedication" Type="nvarchar" MaxLength="200" Nullable="false" />
   </EntityType>
-  <EntityType Name="Project">
-    <Key>
-      <PropertyRef Name="ProjectId" />
-    </Key>
-    <Property Name="ProjectId" Type="int" Nullable="false" />
-    <Property Name="ClientId" Type="int" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
   <EntityType Name="Projects">
     <Key>
       <PropertyRef Name="Id" />
@@ -93,7 +84,6 @@
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Holiday" EntityType="Self.Holiday" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Sow" EntityType="Self.Sow" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WorkingDay" EntityType="Self.WorkingDay" Schema="dbo" store:Type="Tables" />

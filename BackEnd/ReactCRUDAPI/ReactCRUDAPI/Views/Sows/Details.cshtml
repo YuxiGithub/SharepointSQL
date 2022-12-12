@@ -1,0 +1,44 @@
+﻿@model ReactCRUDAPI.Models.Sow
+
+@{
+}
+
+<div>
+    <dl class="dl-horizontal">
+    <div class="form-container">
+    <h4 class="pageTitle">Sow Details</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Budget)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Budget)
+        </dd>
+    <p class="custom-form-group">
+            <input type="button" value="Cancel" class="customButton" onclick="location.href='@Url.Action("Index", "Sows")'" />
+        <input type="button" value="Edit" class="customButton customActionButton" onclick="location.href='@Url.Action("Edit", "Sows", new { id = Model.SowId })'" />
+        </p>
+    </dl>
+</div>
+</div>

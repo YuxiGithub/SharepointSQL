@@ -29,7 +29,6 @@ namespace ReactCRUDAPI.Models
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Holiday> Holidays { get; set; }
         public virtual DbSet<Position> Positions { get; set; }
-        public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<Project1> Projects1 { get; set; }
         public virtual DbSet<Sow> Sows { get; set; }
         public virtual DbSet<WorkingDay> WorkingDays { get; set; }

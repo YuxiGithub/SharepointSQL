@@ -1,0 +1,72 @@
+﻿@model ReactCRUDAPI.Models.Position
+
+@{
+}
+
+<div>
+    <dl class="dl-horizontal">
+    <div class="form-container">
+    <h4 class="pageTitle">Position Details</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.SowId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SowId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientRole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientRole)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEmployee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEmployee)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dedication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dedication)
+        </dd>
+    <p class="custom-form-group">
+            <input type="button" value="Cancel" class="customButton" onclick="location.href='@Url.Action("Index", "Positions")'" />
+        <input type="button" value="Edit" class="customButton customActionButton" onclick="location.href='@Url.Action("Edit", "Positions", new { id = Model.PositionId })'" />
+        </p>
+    </dl>
+</div>
+</div>

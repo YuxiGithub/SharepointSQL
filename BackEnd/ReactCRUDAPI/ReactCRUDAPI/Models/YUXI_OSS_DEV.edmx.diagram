@@ -7,12 +7,11 @@
       <Diagram DiagramId="fc8299a71b824e9cbbb38532b2df6124" Name="Diagram1" ZoomLevel="87">
         <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Client" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Employee" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Holiday" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Position" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Project" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Project1" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Holiday" Width="1.5" PointX="4.625" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Position" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Project1" Width="1.5" PointX="2.75" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.Sow" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.WorkingDay" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YUXI_OSS_DEV_Model.WorkingDay" Width="1.5" PointX="4.75" PointY="3.5" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
