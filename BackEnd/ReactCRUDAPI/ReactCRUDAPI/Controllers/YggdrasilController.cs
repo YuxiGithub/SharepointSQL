@@ -11,7 +11,7 @@ namespace ReactCRUDAPI.Controllers
     [RoutePrefix("Api/Client")]
     public class YggdrasilController : ApiController
     {
-        Entities1 objEntity = new Entities1();
+        YUXI_OSS_DEV_Entities objEntity = new YUXI_OSS_DEV_Entities();
 
         [HttpGet]
         [Route("GetClientsDetails")]
@@ -29,13 +29,13 @@ namespace ReactCRUDAPI.Controllers
 
         [HttpGet]
         [Route("GetClientDetailsById/{clientId}")]
-        public IHttpActionResult GetClientById(string clientId)
+        public IHttpActionResult GetClientById(int clientId)
         {
             Client objClient = new Client();
             int Id = Convert.ToInt32(clientId);
             try
             {
-                objClient = objEntity.Clients.First(c => c.Id == Id);
+                objClient = objEntity.Clients.First(c => c.ClientId == clientId);
                 if (objClient == null)
                 {
                     return NotFound();
@@ -95,13 +95,17 @@ namespace ReactCRUDAPI.Controllers
             try
             {
                 Client objClient = new Client();
-                objClient = objEntity.Clients.First(c => c.Id == client.Id);
+                objClient = objEntity.Clients.First(c => c.UniqueId == client.UniqueId);
                 if (objClient != null)
                 {
                     objClient.Name = client.Name;
-                    objClient.MainPOC = client.MainPOC;
-                    objClient.TacticalPOC = client.TacticalPOC;
-                    objClient.OperativePOC = client.OperativePOC;
+                    objClient.ClientId = client.ClientId;
+                    objClient.Tactical_Contact = client.Tactical_Contact;
+                    objClient.Operative_Contact = client.Operative_Contact;
+                    objClient.Strategic_Contact = client.Strategic_Contact;
+                    objClient.Address = client.Address;
+                    objClient.Country = client.Country;
+
 
                 }
 
@@ -129,7 +133,7 @@ namespace ReactCRUDAPI.Controllers
         public IHttpActionResult DeleteClientDetails(int id)
         {
             string message = "";
-            Client client = objEntity.Clients.First(c => c.Id == id);
+            Client client = objEntity.Clients.First(c => c.ClientId == id);
             if (client == null)
             {
                 return NotFound();

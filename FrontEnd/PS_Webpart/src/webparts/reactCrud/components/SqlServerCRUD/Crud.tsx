@@ -35,11 +35,14 @@ export default class CrudGrid extends React.Component<
 
   public componentDidMount(): void {
     const columnDefs = [
-      { field: "Id", width: 20 },
+      { field: "ClientId", width: 100 },
       { field: "Name", width: 140 },
-      { field: "MainPOC", width: 180 },
-      { field: "TacticalPOC", width: 180 },
-      { field: "OperativePOC", width: 180 },
+      { field: "Tactical_Contact", width: 180, headerName: "Tactical Contact"},
+      { field: "Operative_Contact", width: 180, headerName: "Operative Contact" },
+      { field: "Strategic_Contact", width: 180, headerName: "Strategic Contact" },
+      { field: "Address", width: 180 },
+      { field: "Country", width: 90 },
+
     ];
     this.setState({ columnDefs: columnDefs });
 
@@ -60,8 +63,6 @@ export default class CrudGrid extends React.Component<
     debugger;
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
-    // debugger;
-    // this.gridApi.setRowData(this.props.rowData);
   };
 
   onSelectionChanged = () => {

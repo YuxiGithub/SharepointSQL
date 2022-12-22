@@ -14,8 +14,8 @@ export class SynchServices {
         
         if (data.length > 0) {
             data.forEach((client: ClientRow) => {
-                void this._sp.DeleteListItem(client.Id).then(() => {
-                    console.log(`${client.Id} removed`);
+                void this._sp.DeleteListItem(client.ClientId).then(() => {
+                    console.log(`${client.ClientId} removed`);
                 })
             });
         }
@@ -25,7 +25,7 @@ export class SynchServices {
                 debugger;
                 data.forEach((client: ClientRow) => {
                     void this._sp.CreateListItem(client).then(() => {
-                        console.log(`${client.Id} created in SP`);
+                        console.log(`${client.ClientId} created in SP`);
                     })
                 })
             }

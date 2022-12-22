@@ -69,6 +69,7 @@
     <EntitySetMapping Name="Sows">
       <EntityTypeMapping TypeName="YUXI_OSS_DEV_Model.Sow">
         <MappingFragment StoreEntitySet="Sow">
+          <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="SowId" ColumnName="SowId" />
           <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
           <ScalarProperty Name="StartDate" ColumnName="StartDate" />

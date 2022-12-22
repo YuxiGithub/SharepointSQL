@@ -44,11 +44,13 @@ export default class ReactCrud extends React.Component<
     if (clientRow) {
       const client = clientRow;
       const editedClientForm = [
+        { value: client.ClientId },
         { value: client.Name },
-        { value: client.MainPOC },
-        { value: client.TacticalPOC },
-        { value: client.OperativePOC },
-        { value: client.Id },
+        { value: client.Tactical_Contact },
+        { value: client.Operative_Contact },
+        { value: client.Strategic_Contact },
+        { value: client.Address },
+        { value: client.Country },
       ];
       this.setState({ form: editedClientForm });
       this.setState({ selectedRows: clientRow });
@@ -85,7 +87,7 @@ export default class ReactCrud extends React.Component<
   handleUpdateClient = async (existingClient: ClientRow) => {
     await this._sqlOps.updateItem(existingClient).then(async () => {
       await this._spOps
-        .UpdateListItem(existingClient.Id, existingClient)
+        .UpdateListItem(existingClient.ClientId, existingClient)
         .then(async (ans) => {
           console.log(ans);
           await this._sqlOps.getAllItems().then(async (result) => {

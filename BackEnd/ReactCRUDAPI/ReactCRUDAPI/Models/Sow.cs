@@ -19,5 +19,6 @@ namespace ReactCRUDAPI.Models
         public System.DateTime StartDate { get; set; }
         public Nullable<System.DateTime> EndDate { get; set; }
         public double Budget { get; set; }
+        public string Description { get; set; }
     }
 }

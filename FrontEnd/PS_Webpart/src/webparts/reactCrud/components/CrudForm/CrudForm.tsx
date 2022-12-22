@@ -38,15 +38,17 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
     
     let clientRow: ClientRow = {
       Name: this.state.form[0].value,
-      MainPOC: this.state.form[1].value,
-      TacticalPOC: this.state.form[2].value,
-      OperativePOC: this.state.form[3].value,
+      Tactical_Contact: this.state.form[1].value,
+      Operative_Contact: this.state.form[2].value,
+      Strategic_Contact: this.state.form[3].value,
+      Address: this.state.form[4].value,
+      Country: this.state.form[5].value,
     };
     if (this.props.clientRow) {
-      clientRow.Id = this.props.clientRow?.Id;
+      clientRow.ClientId = this.props.clientRow?.ClientId;
       this.props.onUpdateClick(clientRow);
     } else {
-      clientRow.Id = this.getRandomInt(this.props.rowLength + 20, 99999);
+      clientRow.ClientId = this.getRandomInt(this.props.rowLength + 20, 99999);
       this.props.onAddClick(clientRow);
     }
 
@@ -80,7 +82,7 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
 
           <div>
             <div>
-              <label className={`${styles.myLabel}`}>Main POC:</label>
+              <label className={`${styles.myLabel}`}>Tactical_Contact:</label>
             </div>
             <div>
               <input
@@ -95,7 +97,7 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
 
           <div>
             <div>
-              <label className={`${styles.myLabel}`}>Tactical POC:</label>
+              <label className={`${styles.myLabel}`}>Operative_Contact:</label>
             </div>
             <div>
               <input
@@ -110,7 +112,7 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
 
           <div>
             <div>
-              <label className={`${styles.myLabel}`}>Operative POC:</label>
+              <label className={`${styles.myLabel}`}>Strategic_Contact:</label>
             </div>
             <div>
               <input
@@ -118,6 +120,36 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
                 type="text"
                 className={styles.myInput}
                 value={this.getInputValue(3)}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label className={`${styles.myLabel}`}>Address:</label>
+            </div>
+            <div>
+              <input
+                name="name"
+                type="text"
+                className={styles.myInput}
+                value={this.getInputValue(4)}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label className={`${styles.myLabel}`}>Country:</label>
+            </div>
+            <div>
+              <input
+                name="name"
+                type="text"
+                className={styles.myInput}
+                value={this.getInputValue(5)}
                 onChange={this.handleChange}
               />
             </div>

@@ -14,7 +14,7 @@ export class SPOperations {
       Accept: "application/json;odate=nometadata",
       "Content-Type": "application/json;odate=nometadata",
       Authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSIsImtpZCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbG5jZ29tei5zaGFyZXBvaW50LmNvbUA3MTdhNjc4MC0yMmE3LTRkNWItYmZjMC1iNDQ4NjQ5ZWYwNzMiLCJpc3MiOiIwMDAwMDAwMS0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDBANzE3YTY3ODAtMjJhNy00ZDViLWJmYzAtYjQ0ODY0OWVmMDczIiwiaWF0IjoxNjY3NTAxMDg0LCJuYmYiOjE2Njc1MDEwODQsImV4cCI6MTY2NzU4Nzc4NCwiaWRlbnRpdHlwcm92aWRlciI6IjAwMDAwMDAxLTAwMDAtMDAwMC1jMDAwLTAwMDAwMDAwMDAwMEA3MTdhNjc4MC0yMmE3LTRkNWItYmZjMC1iNDQ4NjQ5ZWYwNzMiLCJuYW1laWQiOiI4ODJlYzU1MS0zZWZkLTQyNWItOTc2OC0zMmVmMTliZmIxMGNANzE3YTY3ODAtMjJhNy00ZDViLWJmYzAtYjQ0ODY0OWVmMDczIiwib2lkIjoiZDZhZTBkMzEtN2ZkNC00ZGU0LTlmOGUtODI1ZDAxOGJlMTQwIiwic3ViIjoiZDZhZTBkMzEtN2ZkNC00ZGU0LTlmOGUtODI1ZDAxOGJlMTQwIiwidHJ1c3RlZGZvcmRlbGVnYXRpb24iOiJmYWxzZSJ9.dIwAr12wxdfhpxGpVCCECWKswOY2DsErEcAOjyJ-8eebdRb8EHjUrKqtAzlS2Ny5PZeky3-2uvxCm-6cMFS05zVk-IHJzIVBkreEiAvG5bMlXuyFzh7sMjARuaPNXdyeX9rLXAWdz-VGCGdvFFc6_PVi1uZcviDnggu6nmKK9P-HfbVcMdJpSErp5QC19DLqGhhhvseT-LG_oFE-wubJJDWtbZlpmHa3CIJaZX9Xac7JxVPU-0VU7ruezWMOrx-hgJ_qIk0crdyiAencgjsGZRVbznm02HKcXiqGvdQbnK02MdTxOExnGM9sdYEe_3JnawYPqUarYusIqniX_AzbuQ",
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAveXV4aWdsb2JhbDEuc2hhcmVwb2ludC5jb21AODkzNTUxNDYtYWJkNC00NTQ1LTgzYTctMGY3MDhkY2E0Yjc5IiwiaXNzIjoiMDAwMDAwMDEtMDAwMC0wMDAwLWMwMDAtMDAwMDAwMDAwMDAwQDg5MzU1MTQ2LWFiZDQtNDU0NS04M2E3LTBmNzA4ZGNhNGI3OSIsImlhdCI6MTY3MTcyNzg5NSwibmJmIjoxNjcxNzI3ODk1LCJleHAiOjE2NzE4MTQ1OTUsImlkZW50aXR5cHJvdmlkZXIiOiIwMDAwMDAwMS0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDBAODkzNTUxNDYtYWJkNC00NTQ1LTgzYTctMGY3MDhkY2E0Yjc5IiwibmFtZWlkIjoiOTY2YzdhMjQtOTczMC00MGE3LWE2NGEtYTc4Nzk2ZjI2NzhjQDg5MzU1MTQ2LWFiZDQtNDU0NS04M2E3LTBmNzA4ZGNhNGI3OSIsIm9pZCI6IjlkMjdkNTE5LWJmMjUtNGZiNS1hM2YyLTQzMDBhZDY2YjkzYyIsInN1YiI6IjlkMjdkNTE5LWJmMjUtNGZiNS1hM2YyLTQzMDBhZDY2YjkzYyIsInRydXN0ZWRmb3JkZWxlZ2F0aW9uIjoiZmFsc2UifQ.AErUaJcSMzR8RziQAwCcZ93R7KtG6mrDv_hRy9PeVA807fkVsuQfAQn1pF6hbrT7TqUfq-7BFgPnet2Zp6y-AdmZO25HzETFFl4D9DwAz7D2NA0ps_JcPbJfs40J-nr_hrWZAsM7iPwYS863k05ylc9gPS3iQv_y6Wd9UTbqhDK-JEZJcd2qKOXGsT8IoT57XzkCSCGiFIwU4-O2SugyZOrb3G8UUNhBKkACQY1Mru2Sy5DsBPi6MOt9M0gy4HUrvMNuIKfT7L_p2mbMNUATluYYnNJshtbkw3aY9773ySecXQyPsnNPWiz_3_48td5r-OBf7OKBkB-qYmNm6nMueg",
       token_type: "Bearer",
       "If-Match": "*",
     };
@@ -23,7 +23,7 @@ export class SPOperations {
   public GetAllList(context: WebPartContext): Promise<IDropdownOption[]> {
     let restApiUrl: string =
       context.pageContext.web.absoluteUrl +
-      "/sites/lncgomzdeveloper/_api/Web/Lists?select=Title";
+      "/sites/oss/_api/Web/Lists?select=Title";
     let listTitles: IDropdownOption[] = [];
     return new Promise<IDropdownOption[]>(async (resolve, reject) => {
       void context.spHttpClient
@@ -50,7 +50,7 @@ export class SPOperations {
 
   public RetrieveListItems(): Promise<ClientRow[]> {
     const url =
-      "https://lncgomz.sharepoint.com/sites/lncgomzdeveloper/_api/Web/Lists/getbytitle('SP_SQLSERVER')/Items";
+      "https://yuxiglobal1.sharepoint.com/sites/oss/Lists/getbytitle('SP_SQLSERVER')/Items";
     return new Promise<ClientRow[]>(async (resolve, reject) => {
       await fetch(url, {
         method: "GET",
@@ -61,27 +61,36 @@ export class SPOperations {
             response.text().then((data) => {
               const xml = new XMLParser().parse(data);
               let rows: ClientRow[] = [];
-              
+
               if (xml.feed.entry) {
                 if (Array.isArray(xml.feed.entry)) {
                   xml.feed.entry.forEach((item: any) => {
                     rows.push({
-                      Id: item.content["m:properties"]["d:Id"],
                       Name: item.content["m:properties"]["d:Name"],
-                      MainPOC: item.content["m:properties"]["d:MainPOC"],
-                      TacticalPOC: item.content["m:properties"]["d:TacticalPOC"],
-                      OperativePOC:
-                        item.content["m:properties"]["d:OperativePOC"],
+                      ClientId: item.content["m:properties"]["d:ClientId"],
+                      Tactical_Contact:
+                        item.content["m:properties"]["d:Tactical_Contact"],
+                      Operative_Contact:
+                        item.content["m:properties"]["d:Operative_Contact"],
+                      Strategic_Contact:
+                        item.content["m:properties"]["d:Strategic_Contact"],
+                      Address: item.content["m:properties"]["d:Address"],
+                      Country: item.content["m:properties"]["d:Country"],
                     });
                   });
                 } else {
                   const item = xml.feed.entry;
                   rows.push({
-                    Id: item.content["m:properties"]["d:Id"],
                     Name: item.content["m:properties"]["d:Name"],
-                    MainPOC: item.content["m:properties"]["d:MainPOC"],
-                    TacticalPOC: item.content["m:properties"]["d:TacticalPOC"],
-                    OperativePOC: item.content["m:properties"]["d:OperativePOC"],
+                    ClientId: item.content["m:properties"]["d:ClientId"],
+                    Tactical_Contact:
+                      item.content["m:properties"]["d:Tactical_Contact"],
+                    Operative_Contact:
+                      item.content["m:properties"]["d:Operative_Contact"],
+                    Strategic_Contact:
+                      item.content["m:properties"]["d:Strategic_Contact"],
+                    Address: item.content["m:properties"]["d:Address"],
+                    Country: item.content["m:properties"]["d:Country"],
                   });
                 }
                 resolve(rows);
@@ -100,7 +109,7 @@ export class SPOperations {
   public CreateListItem(body: ClientRow): Promise<string> {
     debugger;
     const url =
-      "https://lncgomz.sharepoint.com/sites/lncgomzdeveloper/_api/Web/Lists/getbytitle('SP_SQLSERVER')/Items";
+      "https://yuxiglobal1.sharepoint.com/sites/oss/Lists/getbytitle('SP_SQLSERVER')/Items";
     return new Promise<string>(async (resolve, reject) => {
       await fetch(url, {
         method: "POST",
@@ -112,7 +121,7 @@ export class SPOperations {
           if (response.status === 201) {
             resolve("Created");
           } else {
-           reject("Error");
+            reject("Error");
           }
         })
         .catch((err) => {
@@ -126,14 +135,14 @@ export class SPOperations {
     body: ClientRow
   ): Promise<string> {
     const url =
-      "https://lncgomz.sharepoint.com/sites/lncgomzdeveloper/_api/Web/Lists/getbytitle('SP_SQLSERVER')/Items/getbyid('" +
+      "https://yuxiglobal1.sharepoint.com/sites/oss/Lists/getbytitle('SP_SQLSERVER')/Items/getbyid('" +
       selectedItem +
       "')";
     let headers = {
       Accept: "application/json;odate=nometadata",
       "Content-Type": "application/json;odate=nometadata",
       Authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSIsImtpZCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbG5jZ29tei5zaGFyZXBvaW50LmNvbUA3MTdhNjc4MC0yMmE3LTRkNWItYmZjMC1iNDQ4NjQ5ZWYwNzMiLCJpc3MiOiIwMDAwMDAwMS0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDBANzE3YTY3ODAtMjJhNy00ZDViLWJmYzAtYjQ0ODY0OWVmMDczIiwiaWF0IjoxNjY3NTAxMDg0LCJuYmYiOjE2Njc1MDEwODQsImV4cCI6MTY2NzU4Nzc4NCwiaWRlbnRpdHlwcm92aWRlciI6IjAwMDAwMDAxLTAwMDAtMDAwMC1jMDAwLTAwMDAwMDAwMDAwMEA3MTdhNjc4MC0yMmE3LTRkNWItYmZjMC1iNDQ4NjQ5ZWYwNzMiLCJuYW1laWQiOiI4ODJlYzU1MS0zZWZkLTQyNWItOTc2OC0zMmVmMTliZmIxMGNANzE3YTY3ODAtMjJhNy00ZDViLWJmYzAtYjQ0ODY0OWVmMDczIiwib2lkIjoiZDZhZTBkMzEtN2ZkNC00ZGU0LTlmOGUtODI1ZDAxOGJlMTQwIiwic3ViIjoiZDZhZTBkMzEtN2ZkNC00ZGU0LTlmOGUtODI1ZDAxOGJlMTQwIiwidHJ1c3RlZGZvcmRlbGVnYXRpb24iOiJmYWxzZSJ9.dIwAr12wxdfhpxGpVCCECWKswOY2DsErEcAOjyJ-8eebdRb8EHjUrKqtAzlS2Ny5PZeky3-2uvxCm-6cMFS05zVk-IHJzIVBkreEiAvG5bMlXuyFzh7sMjARuaPNXdyeX9rLXAWdz-VGCGdvFFc6_PVi1uZcviDnggu6nmKK9P-HfbVcMdJpSErp5QC19DLqGhhhvseT-LG_oFE-wubJJDWtbZlpmHa3CIJaZX9Xac7JxVPU-0VU7ruezWMOrx-hgJ_qIk0crdyiAencgjsGZRVbznm02HKcXiqGvdQbnK02MdTxOExnGM9sdYEe_3JnawYPqUarYusIqniX_AzbuQ",
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAveXV4aWdsb2JhbDEuc2hhcmVwb2ludC5jb21AODkzNTUxNDYtYWJkNC00NTQ1LTgzYTctMGY3MDhkY2E0Yjc5IiwiaXNzIjoiMDAwMDAwMDEtMDAwMC0wMDAwLWMwMDAtMDAwMDAwMDAwMDAwQDg5MzU1MTQ2LWFiZDQtNDU0NS04M2E3LTBmNzA4ZGNhNGI3OSIsImlhdCI6MTY3MTcyNzg5NSwibmJmIjoxNjcxNzI3ODk1LCJleHAiOjE2NzE4MTQ1OTUsImlkZW50aXR5cHJvdmlkZXIiOiIwMDAwMDAwMS0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDBAODkzNTUxNDYtYWJkNC00NTQ1LTgzYTctMGY3MDhkY2E0Yjc5IiwibmFtZWlkIjoiOTY2YzdhMjQtOTczMC00MGE3LWE2NGEtYTc4Nzk2ZjI2NzhjQDg5MzU1MTQ2LWFiZDQtNDU0NS04M2E3LTBmNzA4ZGNhNGI3OSIsIm9pZCI6IjlkMjdkNTE5LWJmMjUtNGZiNS1hM2YyLTQzMDBhZDY2YjkzYyIsInN1YiI6IjlkMjdkNTE5LWJmMjUtNGZiNS1hM2YyLTQzMDBhZDY2YjkzYyIsInRydXN0ZWRmb3JkZWxlZ2F0aW9uIjoiZmFsc2UifQ.AErUaJcSMzR8RziQAwCcZ93R7KtG6mrDv_hRy9PeVA807fkVsuQfAQn1pF6hbrT7TqUfq-7BFgPnet2Zp6y-AdmZO25HzETFFl4D9DwAz7D2NA0ps_JcPbJfs40J-nr_hrWZAsM7iPwYS863k05ylc9gPS3iQv_y6Wd9UTbqhDK-JEZJcd2qKOXGsT8IoT57XzkCSCGiFIwU4-O2SugyZOrb3G8UUNhBKkACQY1Mru2Sy5DsBPi6MOt9M0gy4HUrvMNuIKfT7L_p2mbMNUATluYYnNJshtbkw3aY9773ySecXQyPsnNPWiz_3_48td5r-OBf7OKBkB-qYmNm6nMueg",
       token_type: "Bearer",
       "If-Match": "*",
       "X-HTTP-Method": "MERGE",
@@ -145,7 +154,7 @@ export class SPOperations {
         headers: headers,
       })
         .then((response) => {
-          resolve('Updated');
+          resolve("Updated");
         })
         .catch((err) => {
           alert(err);
@@ -154,16 +163,15 @@ export class SPOperations {
   }
 
   public DeleteListItem(selectedItem: number): Promise<string> {
-    
     let params = new URLSearchParams({
       Accept: "application/json;odate=verbose",
       "Content-Type": "application/json;odata=verbose",
       Authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSIsImtpZCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbG5jZ29tei5zaGFyZXBvaW50LmNvbUA3MTdhNjc4MC0yMmE3LTRkNWItYmZjMC1iNDQ4NjQ5ZWYwNzMiLCJpc3MiOiIwMDAwMDAwMS0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDBANzE3YTY3ODAtMjJhNy00ZDViLWJmYzAtYjQ0ODY0OWVmMDczIiwiaWF0IjoxNjY3NTAxMDg0LCJuYmYiOjE2Njc1MDEwODQsImV4cCI6MTY2NzU4Nzc4NCwiaWRlbnRpdHlwcm92aWRlciI6IjAwMDAwMDAxLTAwMDAtMDAwMC1jMDAwLTAwMDAwMDAwMDAwMEA3MTdhNjc4MC0yMmE3LTRkNWItYmZjMC1iNDQ4NjQ5ZWYwNzMiLCJuYW1laWQiOiI4ODJlYzU1MS0zZWZkLTQyNWItOTc2OC0zMmVmMTliZmIxMGNANzE3YTY3ODAtMjJhNy00ZDViLWJmYzAtYjQ0ODY0OWVmMDczIiwib2lkIjoiZDZhZTBkMzEtN2ZkNC00ZGU0LTlmOGUtODI1ZDAxOGJlMTQwIiwic3ViIjoiZDZhZTBkMzEtN2ZkNC00ZGU0LTlmOGUtODI1ZDAxOGJlMTQwIiwidHJ1c3RlZGZvcmRlbGVnYXRpb24iOiJmYWxzZSJ9.dIwAr12wxdfhpxGpVCCECWKswOY2DsErEcAOjyJ-8eebdRb8EHjUrKqtAzlS2Ny5PZeky3-2uvxCm-6cMFS05zVk-IHJzIVBkreEiAvG5bMlXuyFzh7sMjARuaPNXdyeX9rLXAWdz-VGCGdvFFc6_PVi1uZcviDnggu6nmKK9P-HfbVcMdJpSErp5QC19DLqGhhhvseT-LG_oFE-wubJJDWtbZlpmHa3CIJaZX9Xac7JxVPU-0VU7ruezWMOrx-hgJ_qIk0crdyiAencgjsGZRVbznm02HKcXiqGvdQbnK02MdTxOExnGM9sdYEe_3JnawYPqUarYusIqniX_AzbuQ",
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAveXV4aWdsb2JhbDEuc2hhcmVwb2ludC5jb21AODkzNTUxNDYtYWJkNC00NTQ1LTgzYTctMGY3MDhkY2E0Yjc5IiwiaXNzIjoiMDAwMDAwMDEtMDAwMC0wMDAwLWMwMDAtMDAwMDAwMDAwMDAwQDg5MzU1MTQ2LWFiZDQtNDU0NS04M2E3LTBmNzA4ZGNhNGI3OSIsImlhdCI6MTY3MTcyNzg5NSwibmJmIjoxNjcxNzI3ODk1LCJleHAiOjE2NzE4MTQ1OTUsImlkZW50aXR5cHJvdmlkZXIiOiIwMDAwMDAwMS0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDBAODkzNTUxNDYtYWJkNC00NTQ1LTgzYTctMGY3MDhkY2E0Yjc5IiwibmFtZWlkIjoiOTY2YzdhMjQtOTczMC00MGE3LWE2NGEtYTc4Nzk2ZjI2NzhjQDg5MzU1MTQ2LWFiZDQtNDU0NS04M2E3LTBmNzA4ZGNhNGI3OSIsIm9pZCI6IjlkMjdkNTE5LWJmMjUtNGZiNS1hM2YyLTQzMDBhZDY2YjkzYyIsInN1YiI6IjlkMjdkNTE5LWJmMjUtNGZiNS1hM2YyLTQzMDBhZDY2YjkzYyIsInRydXN0ZWRmb3JkZWxlZ2F0aW9uIjoiZmFsc2UifQ.AErUaJcSMzR8RziQAwCcZ93R7KtG6mrDv_hRy9PeVA807fkVsuQfAQn1pF6hbrT7TqUfq-7BFgPnet2Zp6y-AdmZO25HzETFFl4D9DwAz7D2NA0ps_JcPbJfs40J-nr_hrWZAsM7iPwYS863k05ylc9gPS3iQv_y6Wd9UTbqhDK-JEZJcd2qKOXGsT8IoT57XzkCSCGiFIwU4-O2SugyZOrb3G8UUNhBKkACQY1Mru2Sy5DsBPi6MOt9M0gy4HUrvMNuIKfT7L_p2mbMNUATluYYnNJshtbkw3aY9773ySecXQyPsnNPWiz_3_48td5r-OBf7OKBkB-qYmNm6nMueg",
       "If-Match": "*",
     });
     const url =
-      "https://lncgomz.sharepoint.com/sites/lncgomzdeveloper/_api/Web/Lists/getbytitle('SP_SQLSERVER')/Items/getbyid('" +
+      "https://yuxiglobal1.sharepoint.com/sites/oss/Lists/getbytitle('SP_SQLSERVER')/Items/getbyid('" +
       selectedItem +
       "')?" +
       params;
@@ -173,20 +181,18 @@ export class SPOperations {
         headers: this.getHeader(),
       })
         .then((response) => {
-          
-          resolve('Deleted');
+          resolve("Deleted");
         })
         .catch((err) => {
-          
           alert(err);
-          reject('Deleted');
+          reject("Deleted");
         });
-    });  
+    });
   }
 
   public ClearList(): Promise<string> {
     const url =
-      "https://lncgomz.sharepoint.com/sites/lncgomzdeveloper/_api/Web/Lists/getbytitle('SP_SQLSERVER')/Items";
+      "https://yuxiglobal1.sharepoint.com/sites/oss/Lists/getbytitle('SP_SQLSERVER')/Items";
     return new Promise<string>(async (resolve, reject) => {
       await fetch(url, {
         method: "GET",
@@ -199,19 +205,24 @@ export class SPOperations {
               let rows: ClientRow[] = [];
               xml.feed.entry.forEach((item: any) => {
                 rows.push({
-                  Id: item.content["m:properties"]["d:Id"],
                   Name: item.content["m:properties"]["d:Name"],
-                  MainPOC: item.content["m:properties"]["d:MainPOC"],
-                  TacticalPOC: item.content["m:properties"]["d:TacticalPOC"],
-                  OperativePOC: item.content["m:properties"]["d:OperativePOC"],
+                  ClientId: item.content["m:properties"]["d:ClientId"],
+                  Tactical_Contact:
+                    item.content["m:properties"]["d:Tactical_Contact"],
+                  Operative_Contact:
+                    item.content["m:properties"]["d:Operative_Contact"],
+                  Strategic_Contact:
+                    item.content["m:properties"]["d:Strategic_Contact"],
+                  Address: item.content["m:properties"]["d:Address"],
+                  Country: item.content["m:properties"]["d:Country"],
                 });
               });
               rows.forEach((r) => {
-                this.DeleteListItem(r.Id).then((response) => {
+                this.DeleteListItem(r.ClientId).then((response) => {
                   console.log(response);
                 });
               });
-              resolve('Clear');
+              resolve("Clear");
             });
           } else {
             alert("Error");
