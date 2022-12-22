@@ -37,18 +37,19 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
   handleSubmit(event: any) {
     
     let clientRow: ClientRow = {
-      Name: this.state.form[0].value,
-      Tactical_Contact: this.state.form[1].value,
-      Operative_Contact: this.state.form[2].value,
-      Strategic_Contact: this.state.form[3].value,
-      Address: this.state.form[4].value,
-      Country: this.state.form[5].value,
+      ClientId: this.state.form[0].value,
+      Name: this.state.form[1].value,
+      Tactical_Contact: this.state.form[2].value,
+      Operative_Contact: this.state.form[3].value,
+      Strategic_Contact: this.state.form[4].value,
+      Address: this.state.form[5].value,
+      Country: this.state.form[6].value,
     };
     if (this.props.clientRow) {
-      clientRow.ClientId = this.props.clientRow?.ClientId;
+      clientRow.UniqueId = String(this.props.clientRow?.UniqueId);
       this.props.onUpdateClick(clientRow);
     } else {
-      clientRow.ClientId = this.getRandomInt(this.props.rowLength + 20, 99999);
+      clientRow.UniqueId = `${this.getRandomInt(this.props.rowLength + 20, 99999)}`;
       this.props.onAddClick(clientRow);
     }
 
@@ -65,9 +66,9 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className={`${styles.myStyles}`}>
-          <div>
+        <div>
             <div>
-              <label className={`${styles.myLabel}`}>Name:</label>
+              <label className={`${styles.myLabel}`}>Client Id:</label>
             </div>
             <div>
               <input
@@ -79,10 +80,9 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
               />
             </div>
           </div>
-
           <div>
             <div>
-              <label className={`${styles.myLabel}`}>Tactical_Contact:</label>
+              <label className={`${styles.myLabel}`}>Name:</label>
             </div>
             <div>
               <input
@@ -97,7 +97,7 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
 
           <div>
             <div>
-              <label className={`${styles.myLabel}`}>Operative_Contact:</label>
+              <label className={`${styles.myLabel}`}>Tactical Contact:</label>
             </div>
             <div>
               <input
@@ -112,7 +112,7 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
 
           <div>
             <div>
-              <label className={`${styles.myLabel}`}>Strategic_Contact:</label>
+              <label className={`${styles.myLabel}`}>Operative Contact:</label>
             </div>
             <div>
               <input
@@ -127,7 +127,7 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
 
           <div>
             <div>
-              <label className={`${styles.myLabel}`}>Address:</label>
+              <label className={`${styles.myLabel}`}>Strategic Contact:</label>
             </div>
             <div>
               <input
@@ -142,7 +142,7 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
 
           <div>
             <div>
-              <label className={`${styles.myLabel}`}>Country:</label>
+              <label className={`${styles.myLabel}`}>Address:</label>
             </div>
             <div>
               <input
@@ -150,6 +150,21 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
                 type="text"
                 className={styles.myInput}
                 value={this.getInputValue(5)}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label className={`${styles.myLabel}`}>Country:</label>
+            </div>
+            <div>
+              <input
+                name="name"
+                type="text"
+                className={styles.myInput}
+                value={this.getInputValue(6)}
                 onChange={this.handleChange}
               />
             </div>

@@ -87,7 +87,7 @@ export default class ReactCrud extends React.Component<
   handleUpdateClient = async (existingClient: ClientRow) => {
     await this._sqlOps.updateItem(existingClient).then(async () => {
       await this._spOps
-        .UpdateListItem(existingClient.ClientId, existingClient)
+        .UpdateListItem(Number(existingClient.ClientId), existingClient)
         .then(async (ans) => {
           console.log(ans);
           await this._sqlOps.getAllItems().then(async (result) => {

@@ -14,7 +14,7 @@ export class SynchServices {
         
         if (data.length > 0) {
             data.forEach((client: ClientRow) => {
-                void this._sp.DeleteListItem(client.ClientId).then(() => {
+                void this._sp.DeleteListItem(Number(client.ClientId)).then(() => {
                     console.log(`${client.ClientId} removed`);
                 })
             });

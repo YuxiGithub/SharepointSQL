@@ -60,7 +60,6 @@ export default class CrudGrid extends React.Component<
     api: { setRowData: (arg0: any) => any };
     columnApi: any;
   }) => {
-    debugger;
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
   };
@@ -73,7 +72,7 @@ export default class CrudGrid extends React.Component<
 
   onDeleteClick = () => {
 
-    const selectedId = this.state.selectedRows[0]["Id"];
+    const selectedId = this.state.selectedRows[0]["UniqueId"];
     this.props.onDeleteClick(selectedId);
   };
 
