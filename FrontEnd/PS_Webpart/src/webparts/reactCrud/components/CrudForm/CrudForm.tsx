@@ -46,10 +46,10 @@ class CrudForm extends React.Component<ICrudFormProps, ICrudFormState, {}> {
       Country: this.state.form[6].value,
     };
     if (this.props.clientRow) {
-      clientRow.UniqueId = String(this.props.clientRow?.UniqueId);
+      clientRow.ClientId = String(this.props.clientRow?.ClientId);
       this.props.onUpdateClick(clientRow);
     } else {
-      clientRow.UniqueId = `${this.getRandomInt(this.props.rowLength + 20, 99999)}`;
+      clientRow.ClientId = `${this.getRandomInt(this.props.rowLength + 20, 99999)}`;
       this.props.onAddClick(clientRow);
     }
 

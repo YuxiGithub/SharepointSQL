@@ -133,7 +133,7 @@ namespace ReactCRUDAPI.Controllers
         public IHttpActionResult DeleteClientDetails(int id)
         {
             string message = "";
-            Client client = objEntity.Clients.First(c => c.ClientId == id);
+            Client client = objEntity.Clients.First(c => c.UniqueId == id);
             if (client == null)
             {
                 return NotFound();

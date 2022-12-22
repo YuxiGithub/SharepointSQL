@@ -11,8 +11,8 @@ import { ClientRow } from "./Common";
 export class SPOperations {
   public getHeader(): HeadersInit {
     return {
-      Accept: "application/json;odata=verbose",
-      "Content-Type": "application/json;odata=verbose",
+      Accept: "application/json;odata=nometadata",
+      "Content-Type": "application/json;odata=nometadata",
       Authorization:
         "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAveXV4aWdsb2JhbDEuc2hhcmVwb2ludC5jb21AODkzNTUxNDYtYWJkNC00NTQ1LTgzYTctMGY3MDhkY2E0Yjc5IiwiaXNzIjoiMDAwMDAwMDEtMDAwMC0wMDAwLWMwMDAtMDAwMDAwMDAwMDAwQDg5MzU1MTQ2LWFiZDQtNDU0NS04M2E3LTBmNzA4ZGNhNGI3OSIsImlhdCI6MTY3MTczMjI3MCwibmJmIjoxNjcxNzMyMjcwLCJleHAiOjE2NzE4MTg5NzAsImlkZW50aXR5cHJvdmlkZXIiOiIwMDAwMDAwMS0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDBAODkzNTUxNDYtYWJkNC00NTQ1LTgzYTctMGY3MDhkY2E0Yjc5IiwibmFtZWlkIjoiOTY2YzdhMjQtOTczMC00MGE3LWE2NGEtYTc4Nzk2ZjI2NzhjQDg5MzU1MTQ2LWFiZDQtNDU0NS04M2E3LTBmNzA4ZGNhNGI3OSIsIm9pZCI6IjlkMjdkNTE5LWJmMjUtNGZiNS1hM2YyLTQzMDBhZDY2YjkzYyIsInN1YiI6IjlkMjdkNTE5LWJmMjUtNGZiNS1hM2YyLTQzMDBhZDY2YjkzYyIsInRydXN0ZWRmb3JkZWxlZ2F0aW9uIjoiZmFsc2UifQ.hw491qXTFFB7-T2UEOC6fxbZoGaqvhJhjFwyVD2QBtMRwfM5Mjs_9_zex9DKpbCWUA32pUVfwmuoSqOPSUIilMX8D7mMPG-8awoRVpf79hBw5u6n94OWtzTTKkARPPcXO1_SK9VsGo-r7U8Wks7LyzzqqvrDFxGC_q2XnKkUb623Jvzglhv112CCEiwi3dxzXW4zmjoU7qy0WjscicS_cR3RsWJrhnBZ8MziN_JvLkm88XpeHfygq83YsEZuuQAgRsyZJwzk16beXVNVelxyzDV9HFL0Xc4zEQvExr9CsIxLChcUwQ_jaUGTSbfkB5erM8BHAA-cp3Pjb2lxcFm2PQ",
       token_type: "Bearer",
@@ -110,7 +110,7 @@ export class SPOperations {
 
   public CreateListItem(body: ClientRow): Promise<string> {
     debugger;
-    body.__metadata = { type: "SP.Data.SP_x005f_SQLSERVERListItem" };
+    // body.__metadata = { type: "SP.Data.SP_x005f_SQLSERVERListItem" };
     const url =
       "https://yuxiglobal1.sharepoint.com/sites/oss/_api/Web/Lists/getbytitle('SP_SQLSERVER')/Items";
     return new Promise<string>(async (resolve, reject) => {
@@ -127,19 +127,6 @@ export class SPOperations {
             console.log(response);
             reject("Error");
           }
-          response.body
-            .getReader()
-            .read()
-            .then(({ done, value }) => {
-              debugger;
-              const dec = new TextDecoder("Uint8Array");
-              const body = dec.decode(value);
-              console.log(body);
-              console.log(value);
-              if (done) {
-                return;
-              }
-            });
         })
         .catch((err) => {
           alert(err);
